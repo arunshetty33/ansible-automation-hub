@@ -1,6 +1,5 @@
 ---
   - name: Playbook
-    hosts: 172.31.86.43
     become: yes
     become_user: root
     tasks:
