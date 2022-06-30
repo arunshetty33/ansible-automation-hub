@@ -1,0 +1,5 @@
+---
+# vars file for mysql_db
+db_name: '{{ mytestdb }}'
+db_user: '{{ mytestdbuser }}'
+db_user_password: '{{ mytestdbuserpwd }}'
