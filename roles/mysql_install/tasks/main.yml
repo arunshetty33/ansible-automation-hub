@@ -20,7 +20,8 @@
         name: pymysql
         state: present
   
-    - name: update mysql root password for all root accounts  
+    - name: update mysql root password for all root accounts
+      become: true
       mysql_user:  
         name: root  
         host: "{{ item }}"  
