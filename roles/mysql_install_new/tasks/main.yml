@@ -1,4 +1,7 @@
 ---
+    - name: Installing galaxy collection
+      ansible.builtin.shell: ansible-galaxy collection install community.mysql
+    
     - include_vars: secrets.yml
       no_log: true
     
