@@ -12,7 +12,13 @@
         name: mysql
         state: started
         enabled: yes
-
+        
+    - name: Make sure pymysql is present
+      become: true # needed if the other tasks are not played as root
+      pip:
+        name: pymysql
+        state: present
+        
     - name: Create Application Database
       mysql_db: name={{ db_name }} state=present
 
