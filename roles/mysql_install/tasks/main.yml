@@ -20,9 +20,9 @@
         name: pymysql
         state: present
         
-    - name: Create Application Database
-      become: true
-      mysql_db: name={{ db_name }} state=present
+    #- name: Create Application Database
+    #  become: true
+    #  mysql_db: name={{ db_name }} state=present
       
     - name: Cretae Database user
       become: true
