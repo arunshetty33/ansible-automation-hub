@@ -1,4 +1,6 @@
 ---
+    - include_vars: secrets.yml
+    
     - name: Install MySQL database
       apt: name={{ item }} state=latest force=yes
       with_items:
