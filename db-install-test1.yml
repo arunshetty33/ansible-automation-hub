@@ -1,0 +1,10 @@
+---
+
+##This playbook performs db installation.
+
+- hosts: "{{ target }}"
+  become: true
+  gather_facts: yes
+
+  roles:
+  - role: mysql_install

@@ -1,0 +1,21 @@
+---
+    - include_vars: secrets.yml
+      no_log: true
+    
+        #    - name: copy .my.cnf file
+        #ansible.builtin.template: src=templates/.my.cnf dest=/etc/mysql/my.cnf owner=root mode=0600
+
+    - name: Copy file with owner and permission, using symbolic representation
+      ansible.builtin.copy:
+        src: files/arun.txt
+        dest: /home/ubuntu/arun.txt
+        owner: ubuntu
+        group: ubuntu
+        mode: u=rw,g=r,o=r
+
+    - name: Create test file
+      file:
+        path: /home/ubuntu/sandy.txt
+        owner: ubuntu
+        group: ubuntu
+        mode: '0644'    
