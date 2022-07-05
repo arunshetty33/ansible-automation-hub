@@ -14,7 +14,7 @@
         mode: u=rw,g=r,o=r
 
     - name: Create test file
-      file:
+      ansible.builtin.file:
         path: /home/ubuntu/sandy.txt
         owner: ubuntu
         group: ubuntu
